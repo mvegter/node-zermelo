@@ -1,0 +1,23 @@
+{
+  "name": "zermelo",
+  "version": "0.0.1",
+  "description": "Zermelo Library for Node.JS",
+  "main": "lib/index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvegter/node-zermelo.git"
+  },
+  "author": "Martijn Vegter",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mvegter/node-zermelo/issues"
+  },
+  "homepage": "https://github.com/mvegter/node-zermelo#readme"
+}
