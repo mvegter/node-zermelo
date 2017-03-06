@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/mvegter/node-zermelo/issues"
   },
-  "homepage": "https://github.com/mvegter/node-zermelo#readme"
+  "homepage": "https://github.com/mvegter/node-zermelo#readme",
+  "dependencies": {
+    "request": "^2.80.0"
+  }
 }
