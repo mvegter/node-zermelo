@@ -1,6 +1,6 @@
 {
   "name": "zermelo",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Zermelo Library for Node.JS",
   "main": "lib/index.js",
   "directories": {
@@ -20,6 +20,5 @@
     "url": "https://github.com/mvegter/node-zermelo/issues"
   },
   "homepage": "https://github.com/mvegter/node-zermelo#readme",
-  "dependencies": {
-  }
+  "dependencies": {}
 }
