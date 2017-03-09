@@ -13,18 +13,19 @@
 ## Usage
 
 ```javascript
-const Zermelo = require('zermelo');
+const ZermeloSchedule = require('zermelo');
+const Zermelo         = new ZermeloSchedule();
 
-const schedule = new Zermelo({
-  'school'    : '',
-  'authCode'  : ''
+Zermelo.logOn({
+  'school'    : '', 
+  'username'  : '',
+  'password'  : ''
 });
 
   or
 
-const schedule = new Zermelo({
-  'school'    : '',
-  'username'  : '',
-  'password'  : ''
+Zermelo.logOn({
+  'school'    : '', 
+  'authCode'  : ''
 });
 ```
