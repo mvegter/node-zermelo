@@ -9,10 +9,21 @@ Zermelo.logOn({
 });
 
 Zermelo.on('loggedOn', function() {
-  Zermelo.getSchedule('1489016804', '1489276004', function(err, res) {
+  Zermelo.getAnnouncements('true', function(err, res) {
     if(err) {
-      throw new Error(err);
+      console.log(err);
     }
+
+    if(!err && res) {
+      console.log(res);
+    }
+  });
+
+  Zermelo.getSchedule('1488668400', '1489359540', function(err, res) {
+    if(err) {
+      console.log(err);
+    }
+
     if(!err && res) {
       console.log(res);
     }
