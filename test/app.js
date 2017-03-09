@@ -13,6 +13,8 @@ Zermelo.on('loggedOn', function() {
     if(err) {
     	throw new Error(err);
     }
-    console.log(res);
+    if(!err && res) {
+    	console.log(res);
+    }
   });
 });
