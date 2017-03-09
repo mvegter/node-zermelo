@@ -11,10 +11,10 @@ Zermelo.logOn({
 Zermelo.on('loggedOn', function() {
   Zermelo.getSchedule('1489016804', '1489276004', function(err, res) {
     if(err) {
-    	throw new Error(err);
+      throw new Error(err);
     }
     if(!err && res) {
-    	console.log(res);
+      console.log(res);
     }
   });
 });
