@@ -8,7 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/app.js"
+    "test": "node test/app.js",
+    "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,10 @@
     "url": "https://github.com/mvegter/node-zermelo/issues"
   },
   "homepage": "https://github.com/mvegter/node-zermelo#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.12.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
 }
