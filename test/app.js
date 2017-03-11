@@ -24,8 +24,8 @@ ZermeloLogin.on('error', (err) => {
 const ZermeloAuthCode    = new ZermeloSchedule();
 
 ZermeloAuthCode.logOn({
-  'school'    : process.env.school, 
-  'authCode'  : '123 456 789 123'
+  'school'    : process.env.school,
+  'authCode'  : '123 456 789'
 });
 
 ZermeloAuthCode.on('loggedOn', function() {
@@ -351,4 +351,48 @@ ZermeloFunctionInvalid3.logOn({
 
 ZermeloFunctionInvalid3.on('error', (err) => {
   console.log(4 + err);
+});
+
+/* */
+
+const ZermeloFunctionInvalid4    = new ZermeloSchedule();
+
+ZermeloFunctionInvalid4.logOn({
+  'school'    : process.env.school, 
+  'username'  : process.env.username,
+  'password'  : process.env.password
+});
+
+ZermeloFunctionInvalid4.on('loggedOn', function() {
+  console.log(1 + ' Logged In');
+
+  ZermeloFunctionInvalid4.getSchedule('1488668400', 'has', function(err, res) {
+    if(err) {
+      console.log(err);
+    }
+
+    if(!err && res) {
+      console.log(res.status);
+    }
+  });
+
+  ZermeloFunctionInvalid4.getSchedule('1488668400', 'has', function(err, res) {
+    if(err) {
+      console.log(err);
+    }
+
+    if(!err && res) {
+      console.log(res.status);
+    }
+  });
+
+  ZermeloFunction.getClassroom('1488668400', '1489359540', 'n413', function(err, res) {
+    if(err) {
+      console.log(err);
+    }
+
+    if(!err && res) {
+      console.log(res.status);
+    }
+  });  
 });
