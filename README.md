@@ -10,12 +10,18 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/mvegter/node-zermelo/badge.svg?style=flat-square)](https://snyk.io/test/github/mvegter/node-zermelo)
 [![GitHub issues](https://img.shields.io/github/issues/mvegter/node-zermelo.svg?style=flat-square)](https://github.com/mvegter/node-zermelo/issues)
 
-## Installation
+# Contents
+- [Installation](#installation-)
+- [Usage](#usage-)
+- [Methods](#methods-)
+- [Events](#events-)
+
+## Installation [^](#contents)
 ```
   npm install zermelo
 ```
 
-## Usage
+## Usage [^](#contents)
 
 ```javascript
 const ZermeloSchedule = require('zermelo');
@@ -34,3 +40,66 @@ Zermelo.logOn({
   'authCode'  : ''
 });
 ```
+
+## Methods [^](#contents)
+### logOn
+- `school` - (required) 
+- `username` - (optional)
+- `password` - (optional)
+- `authCode` - (optional)
+
+Note: Either a Authorization Code or Username / Password combination is required
+
+### getAnnouncements
+- `boolean` - Only retrieve the announcements that should be shown to users (Suggested: true)
+- `callback` - CAlled when succesfully received announcements or an error occurs
+  - `err` - An `Error` object on failure, or `null` on success
+  - `res` - An JSON object containing any announcements
+
+### getSchedule
+- `start` - UTC Unix time of the start of this appointment. This is the first second this appointment is taking place.
+- `end` - UTC Unix time of the end of this appointment. This is the first second where this appointment is no longer taking place.
+- `callback` - CAlled when succesfully received announcements or an error occurs
+  - `err` - An `Error` object on failure, or `null` on success
+  - `res` - An JSON object containing any appointments
+
+### getTeacher
+- `start` - UTC Unix time of the start of this appointment. This is the first second this appointment is taking place.
+- `end` - UTC Unix time of the end of this appointment. This is the first second where this appointment is no longer taking place.
+- `teacher` - The code of the teacher
+- `callback` - CAlled when succesfully received announcements or an error occurs
+  - `err` - An `Error` object on failure, or `null` on success
+  - `res` - An JSON object containing any appointments
+
+### getClassroom
+- `start` - UTC Unix time of the start of this appointment. This is the first second this appointment is taking place.
+- `end` - UTC Unix time of the end of this appointment. This is the first second where this appointment is no longer taking place.
+- `location` - The code of the location
+- `callback` - CAlled when succesfully received announcements or an error occurs
+  - `err` - An `Error` object on failure, or `null` on success
+  - `res` - An JSON object containing any appointments
+
+### getSubject
+- `start` - UTC Unix time of the start of this appointment. This is the first second this appointment is taking place.
+- `end` - UTC Unix time of the end of this appointment. This is the first second where this appointment is no longer taking place.
+- `subject` - The code of the subject
+- `callback` - CAlled when succesfully received announcements or an error occurs
+  - `err` - An `Error` object on failure, or `null` on success
+  - `res` - An JSON object containing any appointments
+  
+### getGroup
+- `start` - UTC Unix time of the start of this appointment. This is the first second this appointment is taking place.
+- `end` - UTC Unix time of the end of this appointment. This is the first second where this appointment is no longer taking place.
+- `subject` - The code of the group
+- `callback` - CAlled when succesfully received announcements or an error occurs
+  - `err` - An `Error` object on failure, or `null` on success
+  - `res` - An JSON object containing any appointments
+  
+## Events [^](#contents)
+### loggedOn
+Emitted when you're successfully logged into Zermelo.
+
+### error
+- `err` - An `Error` object
+
+Emitted when an error occurs during logon. If this event isn't handled, the program will crash.
