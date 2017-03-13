@@ -4,7 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/zermelo.svg?style=flat-square)](https://www.npmjs.com/package/zermelo)
 [![npm](https://img.shields.io/npm/l/zermelo.svg?style=flat-square)](https://github.com/mvegter/node-zermelo/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/mvegter/node-zermelo.svg?branch=master&style=flat-square)](https://travis-ci.org/mvegter/node-zermelo)
+[![Travis branch](https://img.shields.io/travis/mvegter/node-zermelo/master.svg?style=flat-square)](https://travis-ci.org/mvegter/node-zermelo)
 [![Known Vulnerabilities](https://snyk.io/test/github/mvegter/node-zermelo/badge.svg?style=flat-square)](https://snyk.io/test/github/mvegter/node-zermelo)
 
 # Contents
