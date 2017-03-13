@@ -61,39 +61,14 @@ Note: Either a Authorization Code or Username / Password combination is required
 - `end` - UTC Unix time of the end of this appointment. This is the first second where this appointment is no longer taking place.
 - `callback` - CAlled when succesfully received announcements or an error occurs
   - `err` - An `Error` object on failure, or `null` on success
-  - `res` - An JSON object containing any appointments
-
-### getTeacher
-- `start` - UTC Unix time of the start of this appointment. This is the first second this appointment is taking place.
-- `end` - UTC Unix time of the end of this appointment. This is the first second where this appointment is no longer taking place.
-- `teacher` - The code of the teacher
-- `callback` - CAlled when succesfully received announcements or an error occurs
-  - `err` - An `Error` object on failure, or `null` on success
-  - `res` - An JSON object containing any appointments
-
-### getClassroom
-- `start` - UTC Unix time of the start of this appointment. This is the first second this appointment is taking place.
-- `end` - UTC Unix time of the end of this appointment. This is the first second where this appointment is no longer taking place.
-- `location` - The code of the location
-- `callback` - CAlled when succesfully received announcements or an error occurs
-  - `err` - An `Error` object on failure, or `null` on success
-  - `res` - An JSON object containing any appointments
-
-### getSubject
-- `start` - UTC Unix time of the start of this appointment. This is the first second this appointment is taking place.
-- `end` - UTC Unix time of the end of this appointment. This is the first second where this appointment is no longer taking place.
-- `subject` - The code of the subject
-- `callback` - CAlled when succesfully received announcements or an error occurs
-  - `err` - An `Error` object on failure, or `null` on success
-  - `res` - An JSON object containing any appointments
-  
-### getGroup
-- `start` - UTC Unix time of the start of this appointment. This is the first second this appointment is taking place.
-- `end` - UTC Unix time of the end of this appointment. This is the first second where this appointment is no longer taking place.
-- `subject` - The code of the group
-- `callback` - CAlled when succesfully received announcements or an error occurs
-  - `err` - An `Error` object on failure, or `null` on success
-  - `res` - An JSON object containing any appointments
+  - `res` - An JSON object
+    - `status` - If there was no error, than this should be 200
+    - `message` - Unknown field
+    - `details` - Unknown field
+    - `eventId` - Unknown field
+    - `startRow` - Should always be 0
+    - `endRow` - Total length of data object
+    - `data` - A JSON object containing any appointments
   
 ## Events [^](#contents)
 ### loggedOn
