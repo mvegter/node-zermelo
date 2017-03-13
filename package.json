@@ -5,10 +5,13 @@
   "main": "lib/index.js",
   "directories": {
     "example": "examples",
+	"standard": "standard && node ./lib/test.js",
     "test": "test",
     "test-travis": "node ./node_modules/istanbul/lib/cli.js cover test/app.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "winston": "2.3.1"
+  },
   "devDependencies": {
     "istanbul": "0.4.5",
     "standard": "9.0.1"
