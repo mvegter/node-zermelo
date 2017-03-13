@@ -5,10 +5,14 @@
   "main": "lib/index.js",
   "directories": {
     "example": "examples",
-    "test": "test"
+    "test": "test",
+    "test-travis": "node ./node_modules/istanbul/lib/cli.js cover test/app.js"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "istanbul": "0.4.5",
+    "standard": "9.0.1"
+  },
   "scripts": {
     "test": "test"
   },
