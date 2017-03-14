@@ -29,7 +29,9 @@
     "schedule",
     "third-party",
     "timetable",
-    "json"
+    "json",
+	"node",
+	"javascript"
   ],
   "author": "Martijn Vegter",
   "license": "MIT",
