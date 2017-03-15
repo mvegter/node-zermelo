@@ -1,6 +1,6 @@
 {
   "name": "node-zermelo",
-  "version": "0.7.6",
+  "version": "0.8.0",
   "description": "Unofficial Zermelo Library for Node.Js",
   "main": "lib/index.js",
   "directories": {
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "test",
-	"test-travis": "node ./node_modules/istanbul/lib/cli.js cover test/app.js"
+    "test-travis": "node ./node_modules/istanbul/lib/cli.js cover test/app.js"
   },
   "repository": {
     "type": "git",
@@ -28,8 +28,8 @@
     "third-party",
     "timetable",
     "json",
-	"node",
-	"javascript"
+    "node",
+    "javascript"
   ],
   "author": "Martijn Vegter",
   "license": "MIT",
