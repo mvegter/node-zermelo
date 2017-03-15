@@ -5,9 +5,11 @@ Zermelo.logOn({
   'school'    : process.env.school, 
   'username'  : process.env.username,
   'password'  : process.env.password
-});
+}, (err) => {
+  if(err) {
+    console.error(err);
+  }
 
-Zermelo.on('loggedOn', function() {
   Zermelo.getUnique('1488668400', '1489359540', 'location', 'n008', (err, res) => {
     if(err) {
       return console.error(err);
@@ -57,9 +59,10 @@ zermeloAnnounce.logOn({
   'school'    : process.env.school, 
   'username'  : process.env.username,
   'password'  : process.env.password
-});
-
-zermeloAnnounce.on('loggedOn', function() {
+}, (err) => {
+  if(err) {
+    console.error(err);
+  }
 
   zermeloAnnounce.getAnnouncements('true', function (err, res) {
     if(err) {
@@ -95,23 +98,30 @@ zermeloLog.logOn({
   'school'    : process.env.school, 
   'username'  : process.env.username,
   'password'  : process.env.password
+}, (err) => {
+  if(err) {
+    console.error(err);
+  }
 });
 
-zermeloLog .on('loggedOn', function() {
-  zermeloLog.logOn({
+zermeloLog.logOn({
   'school'    : process.env.school, 
   'username'  : process.env.username,
   'password'  : process.env.password
-  });    
+}, (err) => {
+  if(err) {
+    console.error(err);
+  }
 });
 
 const zermeloSchool  = new ZermeloSchedule();
-zermeloSchool.logOn({
+zermeloLog.logOn({
   'username'  : process.env.username,
   'password'  : process.env.password
-});
-
-zermeloLog .on('loggedOn', function() {  
+}, (err) => {
+  if(err) {
+    console.error(err);
+  }
 });
 
 
@@ -119,7 +129,28 @@ const zermeloCode  = new ZermeloSchedule();
 zermeloCode.logOn({
   'school'    : process.env.school, 
   'authCode': '123 456 789'
+}, (err) => {
+  if(err) {
+    console.error(err);
+  }
 });
 
-zermeloCode .on('loggedOn', function() {  
+const zermeloLog1    = new ZermeloSchedule();
+zermeloLog1.logOn({
+  'school'    : process.env.school, 
+  'username'  : process.env.username,
+}, (err) => {
+  if(err) {
+    console.error(err);
+  }
+});
+
+const zermeloLog2    = new ZermeloSchedule();
+zermeloLog2.logOn({
+  'school'    : process.env.school, 
+  'password'  : process.env.password
+}, (err) => {
+  if(err) {
+    console.error(err);
+  }
 });
