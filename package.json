@@ -1,5 +1,5 @@
 {
-  "name": "node-zermelo",
+  "name": "zermelo",
   "version": "0.8.2",
   "description": "Unofficial Zermelo Library for Node.Js",
   "main": "lib/index.js",
