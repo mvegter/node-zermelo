@@ -11,10 +11,12 @@
   "devDependencies": {
     "coveralls": "^2.12.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "codecov": "^1.0.0"
   },
   "scripts": {
     "test": "test",
+    "test-codecov": "istanbul cover ./node_modules/mocha/bin/_mocha && codecov",
     "test-travis": "node ./node_modules/istanbul/lib/cli.js cover test/app.js"
   },
   "repository": {
