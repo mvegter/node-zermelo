@@ -5,4 +5,10 @@ Zermelo.logOn({
 	'school' 		: '', 
   'username' 	: '',
   'password' 	: ''
+}, (err) => {
+  if(err) {
+    console.log(err);
+    return;
+  }
+
 });
