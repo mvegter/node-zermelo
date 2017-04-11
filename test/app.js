@@ -52,7 +52,7 @@ const Zermelo10 = new ZermeloSchedule({'school': process.env.school, 'secure': '
 const Zermelo11 = new ZermeloSchedule({'school': process.env.school, 'secure': false});
 const Zermelo12 = new ZermeloSchedule({'school': process.env.school, 'secure': 'false'});
 
-const Zermelo13   = new ZermeloSchedule(process.env.school, 'fake');
+const Zermelo13 = new ZermeloSchedule(process.env.school, 'fake');
 
 const Zermelo14 = new ZermeloSchedule({'school': process.env.school});
 Zermelo14.logOn({

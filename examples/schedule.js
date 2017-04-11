@@ -1,5 +1,5 @@
 const Schedule = require('zermelo');
-const Zermelo = new ZermeloSchedule('SCHOOL_NAME');
+const Zermelo = new Schedule('SCHOOL_NAME');
 
 Zermelo.logOn({
   'username': 'USERNAME',
