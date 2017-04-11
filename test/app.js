@@ -1,4 +1,4 @@
-const ZermeloSchedule = require('../lib/index.js');
+const ZermeloSchedule = require('zermelo');
 const Zermelo    = new ZermeloSchedule(process.env.school);
 
 Zermelo.logOn({
