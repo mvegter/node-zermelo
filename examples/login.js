@@ -1,13 +1,13 @@
-const Schedule = require('zermelo');
-const Zermelo  = new ZermeloSchedule('SCHOOL_NAME');
+const Schedule = require('zermelo')
+const Zermelo = new ZermeloSchedule('SCHOOL_NAME')
 
 Zermelo.logOn({
-  'username'  : 'USERNAME',
-  'password'  : 'PASSWORD'
+  'username': 'USERNAME',
+  'password': 'PASSWORD'
 }, (err) => {
-  if(err) {
-    throw new Error(err);
+  if (err) {
+    throw new Error(err)
   }
 
-  console.log('Logged on!');
-});
+  console.log('Logged on!')
+})
