@@ -9,6 +9,34 @@ Zermelo1.logOn({
     console.error(err);
   }
   console.log('Logged in!');
+
+  var curr = new Date;
+  var monday = new Date(curr.setDate(curr.getDate() - curr.getDay()));
+  var friday = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
+
+  monday = Math.round(monday.getTime() / 1000);
+  friday = Math.round(friday.getTime() / 1000);
+
+  Zermelo1.getSchedule(monday, friday, (err, res) => {
+    if(err) {
+      console.log(err);
+    }
+    console.log('Got schedule!');
+  });
+
+  Zermelo1.getSchedule('asdf', friday, (err, res) => {
+    if(err) {
+      console.log(err);
+    }
+    console.log('Got schedule!');
+  });
+
+  Zermelo1.getSchedule(monday, 'asdf', (err, res) => {
+    if(err) {
+      console.log(err);
+    }
+    console.log('Got schedule!');
+  });     
 });
 
 const Zermelo2    = new ZermeloSchedule(process.env.school, true);
