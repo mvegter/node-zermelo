@@ -5,9 +5,11 @@ Zermelo.logOn({
   'school'    : '', 
   'username'  : '',
   'password'  : ''
-});
-
-Zermelo.on('loggedOn', function() {
+}, (err) => {
+  if(err) {
+    console.log(err);
+    return;
+  }
   console.log('Succesfully logged into Zermelo');
 
   Zermelo.getAnnouncements('true', function(err, res) {
