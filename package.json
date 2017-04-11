@@ -1,6 +1,6 @@
 {
   "name": "zermelo",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Unofficial Zermelo Library for Node.Js",
   "main": "lib/index.js",
   "directories": {
