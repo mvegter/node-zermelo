@@ -38,3 +38,4 @@ jspm_packages
 
 # Hidden Test folder
 private
+test/app2.js
