@@ -52,8 +52,10 @@ const Zermelo10 = new ZermeloSchedule({'school': process.env.school, 'secure': '
 const Zermelo11 = new ZermeloSchedule({'school': process.env.school, 'secure': false});
 const Zermelo12 = new ZermeloSchedule({'school': process.env.school, 'secure': 'false'});
 
-const Zermelo13 = new ZermeloSchedule({'school': process.env.school});
-Zermelo13.logOn({
+const Zermelo13   = new ZermeloSchedule(process.env.school, 'fake');
+
+const Zermelo14 = new ZermeloSchedule({'school': process.env.school});
+Zermelo14.logOn({
   'password': process.env.password
 }, (err) => {
   if (err) {
@@ -61,7 +63,7 @@ Zermelo13.logOn({
   }
 });
 
-Zermelo13.logOn({
+Zermelo14.logOn({
   'username': process.env.username
 }, (err) => {
   if (err) {
@@ -69,7 +71,7 @@ Zermelo13.logOn({
   }
 });
 
-Zermelo13.logOn({
+Zermelo14.logOn({
   'username': process.env.username,
   'password': process.env.password
 }, (err) => {
@@ -77,7 +79,7 @@ Zermelo13.logOn({
     console.log(err);
   }
 
-  Zermelo13.logOn({
+  Zermelo14.logOn({
     'username': process.env.username,
     'password': process.env.password
   }, (err) => {
