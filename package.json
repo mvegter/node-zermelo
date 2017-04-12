@@ -17,7 +17,7 @@
   "scripts": {
     "test": "test",
     "test-codecov": "istanbul cover ./node_modules/mocha/bin/_mocha && codecov",
-    "test-travis": "node ./node_modules/istanbul/lib/cli.js cover test/app.js"
+    "test-travis": "node ./node_modules/istanbul/lib/cli.js cover test/app.js && codecov"
   },
   "repository": {
     "type": "git",
