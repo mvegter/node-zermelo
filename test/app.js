@@ -145,3 +145,44 @@ Zermelo5.logOn({
   }
   console.log('Logged in!');
 });
+
+const Zermelo6 = new ZermeloSchedule();
+Zermelo6.logOn({
+  'school': process.env.school,
+  'username': process.env.username,
+  'password': process.env.password
+}, (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('Logged in!');
+
+  Zermelo6.getAnnouncements('true', function (err, res) {
+    if (err) {
+      return console.error(err);
+    }
+    console.log(res.status);
+  });
+
+  Zermelo6.getAnnouncements('false', function (err, res) {
+    if (err) {
+      return console.error(err);
+    }
+    console.log(res.status);
+  });
+
+  Zermelo6.getAnnouncements('tru', function (err, res) {
+    if (err) {
+      return console.error(err);
+    }
+    console.log(res.status);
+  });
+
+  Zermelo6.getAnnouncements('fals', function (err, res) {
+    if (err) {
+      return console.error(err);
+    }
+    console.log(res.status);
+  });
+});
