@@ -121,3 +121,27 @@ Zermelo4.logOn({
   }
   console.log('Logged in!');
 });
+
+const Zermelo5 = new ZermeloSchedule();
+Zermelo5.logOn({
+  'school': process.env.school,
+  'authCode': '123 456 789'
+}, (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('Logged in!');
+});
+
+Zermelo5.logOn({
+  'school': process.env.school,
+  'authCode': '123 456 789',
+  'secure': false
+}, (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('Logged in!');
+});
