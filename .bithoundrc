@@ -11,7 +11,6 @@
     "**/**jquery.?(ui|effects)-*.*.?(*).?(cs|j)s",
     "**/**jquery-*.*.?(*).?(cs|j)s",
     "**/prototype?(*).js",
-    "**/**?(*).ts",
     "**/mootools*.*.*.js",
     "**/dojo.js",
     "**/MochiKit.js",
@@ -49,8 +48,5 @@
     "**/tests/**",
     "**/spec/**",
     "**/specs/**"
-  ],
-  "dependencies": {
-    "unused-ignores": []
-  }
+  ]
 }
