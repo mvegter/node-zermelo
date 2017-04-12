@@ -94,3 +94,30 @@ Zermelo3.logOn({
     console.log('Got schedule!');
   });
 });
+
+const Zermelo4 = new ZermeloSchedule();
+Zermelo4.logOn({
+  'school': process.env.school,
+  'username': process.env.username,
+  'password': process.env.password,
+  'secure': false
+}, (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('Logged in!');
+});
+
+Zermelo4.logOn({
+  'school': process.env.school,
+  'username': process.env.username,
+  'password': process.env.password,
+  'secure': true
+}, (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('Logged in!');
+});
